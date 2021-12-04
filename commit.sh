@@ -1,9 +1,7 @@
 #! /bin/bash
-
 image=${1}
 tmp_image=${image#*\/}
 gen_image=${tmp_image//[\/:]/-}
-
 git checkout .
 git pull 
 echo "From ${image}" > Dockerfile
